@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.capg.mobilegames.service.MobileGamesServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-01-03T10:44:32" hostname="LIN76004070" time="0.129">
+<testsuite name="com.capg.mobilegames.service.MobileGamesServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-01-03T12:16:13" hostname="LIN76004070" time="0.309">
   <properties/>
-  <testcase name="testGetMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.08"/>
+  <testcase name="testGetMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.209"/>
+  <testcase name="testAddMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.008"/>
+  <testcase name="testGetMobileGameThrowException()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.022"/>
+  <testcase name="testGetMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.01"/>
   <testcase name="testAddMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.006"/>
-  <testcase name="testGetMobileGameThrowException()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.008"/>
-  <testcase name="testGetMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.005"/>
-  <testcase name="testAddMobileGame()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.005"/>
-  <testcase name="testGetMobileGameThrowException()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.003"/>
-  <system-out><![CDATA[16:14:32.632 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is initialized
-16:14:32.635 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
-16:14:32.635 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
-16:14:32.636 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is executed
-16:14:32.640 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is initialized
-16:14:32.642 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is initialized
-16:14:32.642 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
-16:14:32.643 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is executed
-16:14:32.647 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is initialized
-16:14:32.651 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
-16:14:32.652 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is executed
-16:14:32.672 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is initialized
-16:14:32.673 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
-16:14:32.674 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
-16:14:32.675 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is executed
-16:14:32.679 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is initialized
-16:14:32.680 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is initialized
-16:14:32.680 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
-16:14:32.681 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is executed
-16:14:32.684 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is initialized
-16:14:32.685 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
-16:14:32.686 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is executed
+  <testcase name="testGetMobileGameThrowException()" classname="com.capg.mobilegames.service.MobileGamesServiceTest" time="0.007"/>
+  <system-out><![CDATA[17:46:13.351 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is initialized
+17:46:13.356 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
+17:46:13.359 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
+17:46:13.361 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is executed
+17:46:13.364 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is initialized
+17:46:13.367 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is initialized
+17:46:13.368 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
+17:46:13.369 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is executed
+17:46:13.376 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is initialized
+17:46:13.394 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
+17:46:13.395 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is executed
+17:46:13.439 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is initialized
+17:46:13.443 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
+17:46:13.443 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
+17:46:13.444 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGame method is executed
+17:46:13.449 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is initialized
+17:46:13.450 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is initialized
+17:46:13.450 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service: addMobileGame method is executed
+17:46:13.451 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testaddMobileGame method is executed
+17:46:13.458 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is initialized
+17:46:13.459 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - MobileGamesService: getMobileGame method is initialized
+17:46:13.460 [Test worker] INFO com.capg.mobilegames.utils.MobileGamesConstants - Mobile Games Service Test: testgetMobileGamethrowException method is executed
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
