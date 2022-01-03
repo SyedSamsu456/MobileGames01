@@ -14,8 +14,8 @@ sourceCompatibility = '11'
 sonarqube {
  properties {
 	 property 'sonar.sourceEncoding', 'UTF-8'
-	 property "sonar.sources", "${sourceSets.main.allJava.srcDirs}"
-	 property "sonar.tests","${sourceSets.test.allJava.srcDirs}"
+	 property "sonar.sources", "src"
+	 property "sonar.tests", "test"
  }
 }
 
