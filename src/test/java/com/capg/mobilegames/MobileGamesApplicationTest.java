@@ -6,6 +6,6 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @SelectPackages({"com.capg.mobilegames.controller"
 	,"com.capg.mobilegames.service"})
-public class MobileGamesApplicationTests {
+public class MobileGamesApplicationTest {
 
 }
