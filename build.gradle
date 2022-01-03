@@ -12,11 +12,11 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 sonarqube {
- properties {
-	 property 'sonar.sourceEncoding', 'UTF-8'
-	 property "sonar.sources", "src"
- }
+    properties {
+        property 'sonar.host.url', 'http://localhost:9000'
+    }
 }
+
 
 repositories {
 	mavenCentral()
