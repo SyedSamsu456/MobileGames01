@@ -1,0 +1,59 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.capg.mobilegames'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	mapstructVersion = "1.4.0.Beta2"
+	set('springCloudVersion', "2021.0.0")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.h2database:h2'
+	implementation 'org.springframework.cloud:spring-cloud-config-client'
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '3.1.0'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+		testRuntimeOnly "org.junit.platform:junit-platform-commons:1.7.0"
+	}
+	compileOnly "org.mapstruct:mapstruct:${mapstructVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+	implementation group: 'org.junit.platform', name: 'junit-platform-suite-engine', version: '1.8.2'
+	implementation group: 'org.hibernate.validator', name: 'hibernate-validator-annotation-processor', version: '7.0.1.Final'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.5.6'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.5.6'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bootstrap', version: '3.0.0'
+	testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.12.4'
+	implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.1.0'
+	testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.1.0'
+	implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.1.0'
+	testImplementation 'io.cucumber:cucumber-spring:7.1.0'
+	compileOnly 'io.cucumber:cucumber-jvm-deps:1.0.6'
+	testImplementation "com.github.tomakehurst:wiremock-jre8:2.32.0"
+	testImplementation 'io.rest-assured:rest-assured:4.4.0'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
