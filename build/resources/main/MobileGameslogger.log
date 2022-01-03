@@ -85,3 +85,291 @@
 03-01-2022 14:14:54 - INFO  com.netflix.discovery.DiscoveryClient : Unregistering ...
 03-01-2022 14:14:54 - INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOBILEGAMES/host.docker.internal:mobilegames:9090 - deregister  status: 200
 03-01-2022 14:14:54 - INFO  com.netflix.discovery.DiscoveryClient : Completed shut down of DiscoveryClient
+03-01-2022 19:36:27 - INFO  com.capg.mobilegames.MobileGamesApplication : No active profile set, falling back to default profiles: default
+03-01-2022 19:36:28 - WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.capg.mobilegames.MobileGamesApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+03-01-2022 19:36:28 - INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+03-01-2022 19:36:28 - ERROR org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.capg.mobilegames.MobileGamesApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.14.jar:5.3.14]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.2.jar:2.6.2]
+	at com.capg.mobilegames.MobileGamesApplication.main(MobileGamesApplication.java:20) ~[main/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:372) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:272) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.14.jar:5.3.14]
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'PORT' in value "${PORT}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:65) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:605) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64) ~[spring-boot-actuator-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58) ~[spring-boot-actuator-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49) ~[spring-boot-actuator-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.2.jar:2.6.2]
+	... 25 common frames omitted
+03-01-2022 19:37:16 - INFO  com.capg.mobilegames.MobileGamesApplication : No active profile set, falling back to default profiles: default
+03-01-2022 19:37:17 - WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.capg.mobilegames.MobileGamesApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+03-01-2022 19:37:17 - INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+03-01-2022 19:37:17 - ERROR org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.capg.mobilegames.MobileGamesApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.14.jar:5.3.14]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.2.jar:2.6.2]
+	at com.capg.mobilegames.MobileGamesApplication.main(MobileGamesApplication.java:20) ~[main/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:372) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:272) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.14.jar:5.3.14]
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'PORT' in value "${PORT}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:65) ~[spring-boot-2.6.2.jar:2.6.2]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:605) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64) ~[spring-boot-actuator-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58) ~[spring-boot-actuator-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49) ~[spring-boot-actuator-autoconfigure-2.6.2.jar:2.6.2]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.2.jar:2.6.2]
+	... 25 common frames omitted
+03-01-2022 19:37:49 - INFO  com.capg.mobilegames.MobileGamesApplication : No active profile set, falling back to default profiles: default
+03-01-2022 19:37:50 - INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03-01-2022 19:37:50 - INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 1 JPA repository interfaces.
+03-01-2022 19:37:50 - INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=e794e561-d25c-3c6e-ac23-890a705d098c
+03-01-2022 19:37:51 - INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 9090 (http)
+03-01-2022 19:37:51 - INFO  org.apache.catalina.core.StandardService : Starting service [Tomcat]
+03-01-2022 19:37:51 - INFO  org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
+03-01-2022 19:37:52 - INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+03-01-2022 19:37:52 - INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2884 ms
+03-01-2022 19:37:52 - INFO  com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+03-01-2022 19:37:52 - INFO  com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+03-01-2022 19:37:52 - INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+03-01-2022 19:37:53 - INFO  org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+03-01-2022 19:37:53 - INFO  org.hibernate.Version : HHH000412: Hibernate ORM core version 5.6.3.Final
+03-01-2022 19:37:53 - INFO  org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+03-01-2022 19:37:53 - INFO  org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+03-01-2022 19:37:54 - INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03-01-2022 19:37:54 - INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+03-01-2022 19:37:55 - WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03-01-2022 19:37:56 - INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+03-01-2022 19:37:56 - WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+03-01-2022 19:37:56 - INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 17 endpoint(s) beneath base path '/actuator'
+03-01-2022 19:37:57 - INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Initializing Eureka in region us-east-1
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver : Resolving eureka endpoints via configuration
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Disable delta property : false
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Single vip registry refresh property : null
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Force full registry fetch : false
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Application is null : false
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Registered Applications size is zero : true
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Application version is -1: true
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Getting all instance registry info from the eureka server
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : The response status is 200
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Starting heartbeat executor: renew interval is: 30
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.InstanceInfoReplicator : InstanceInfoReplicator onDemand update allowed rate per min is 4
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Discovery Client initialized at timestamp 1641218877932 with initial instances count: 0
+03-01-2022 19:37:57 - INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application MOBILEGAMES with eureka with status UP
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1641218877937, current=UP, previous=STARTING]
+03-01-2022 19:37:57 - INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOBILEGAMES/host.docker.internal:mobilegames:9090: registering service...
+03-01-2022 19:37:57 - INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 9090 (http) with context path ''
+03-01-2022 19:37:58 - INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 9090
+03-01-2022 19:37:58 - INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOBILEGAMES/host.docker.internal:mobilegames:9090 - registration status: 204
+03-01-2022 19:37:58 - INFO  com.capg.mobilegames.MobileGamesApplication : Started MobileGamesApplication in 13.546 seconds (JVM running for 14.29)
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Disable delta property : false
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Single vip registry refresh property : null
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Force full registry fetch : false
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Application is null : false
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Registered Applications size is zero : true
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Application version is -1: false
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : Getting all instance registry info from the eureka server
+03-01-2022 19:38:27 - INFO  com.netflix.discovery.DiscoveryClient : The response status is 200
+03-01-2022 19:38:45 - INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+03-01-2022 19:38:45 - INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+03-01-2022 19:38:45 - INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 2 ms
+03-01-2022 19:38:45 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Controller: getMobileGame method is initialized
+03-01-2022 19:38:45 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : MobileGamesService: getMobileGame method is initialized
+03-01-2022 19:38:45 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Service: addMobileGame method is executed
+03-01-2022 19:38:45 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Mapper : MobileGames to MobileGamesDTO is initialized
+03-01-2022 19:38:45 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Mapper : MobileGames to MobileGamesDTO is Executed
+03-01-2022 19:38:45 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Controller: getMobileGame method is executed
+03-01-2022 19:38:48 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Controller: getMobileGame method is initialized
+03-01-2022 19:38:48 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : MobileGamesService: getMobileGame method is initialized
+03-01-2022 19:38:48 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Service: addMobileGame method is executed
+03-01-2022 19:38:48 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Mapper : MobileGames to MobileGamesDTO is initialized
+03-01-2022 19:38:48 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Mapper : MobileGames to MobileGamesDTO is Executed
+03-01-2022 19:38:48 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Controller: getMobileGame method is executed
+03-01-2022 19:41:15 - INFO  com.capg.mobilegames.MobileGamesApplication : No active profile set, falling back to default profiles: default
+03-01-2022 19:41:16 - INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03-01-2022 19:41:17 - INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 314 ms. Found 1 JPA repository interfaces.
+03-01-2022 19:41:17 - INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=4e94787d-8ee3-3e7b-9c57-d58664372e73
+03-01-2022 19:41:18 - INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 9090 (http)
+03-01-2022 19:41:18 - INFO  org.apache.catalina.core.StandardService : Starting service [Tomcat]
+03-01-2022 19:41:18 - INFO  org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
+03-01-2022 19:41:18 - INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+03-01-2022 19:41:18 - INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2952 ms
+03-01-2022 19:41:18 - INFO  com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+03-01-2022 19:41:18 - INFO  com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+03-01-2022 19:41:18 - INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+03-01-2022 19:41:19 - INFO  org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+03-01-2022 19:41:19 - INFO  org.hibernate.Version : HHH000412: Hibernate ORM core version 5.6.3.Final
+03-01-2022 19:41:19 - INFO  org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+03-01-2022 19:41:19 - INFO  org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+03-01-2022 19:41:20 - INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03-01-2022 19:41:20 - INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+03-01-2022 19:41:21 - WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03-01-2022 19:41:22 - INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+03-01-2022 19:41:22 - WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+03-01-2022 19:41:22 - INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 17 endpoint(s) beneath base path '/actuator'
+03-01-2022 19:41:22 - INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Initializing Eureka in region us-east-1
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver : Resolving eureka endpoints via configuration
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Disable delta property : false
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Single vip registry refresh property : null
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Force full registry fetch : false
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Application is null : false
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Registered Applications size is zero : true
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Application version is -1: true
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Getting all instance registry info from the eureka server
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : The response status is 200
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Starting heartbeat executor: renew interval is: 30
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.InstanceInfoReplicator : InstanceInfoReplicator onDemand update allowed rate per min is 4
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Discovery Client initialized at timestamp 1641219083520 with initial instances count: 1
+03-01-2022 19:41:23 - INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application MOBILEGAMES with eureka with status UP
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1641219083524, current=UP, previous=STARTING]
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOBILEGAMES/host.docker.internal:mobilegames:9090: registering service...
+03-01-2022 19:41:23 - INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 9090 (http) with context path ''
+03-01-2022 19:41:23 - INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 9090
+03-01-2022 19:41:23 - INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOBILEGAMES/host.docker.internal:mobilegames:9090 - registration status: 204
+03-01-2022 19:41:24 - INFO  com.capg.mobilegames.MobileGamesApplication : Started MobileGamesApplication in 11.672 seconds (JVM running for 12.418)
+03-01-2022 19:41:33 - INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+03-01-2022 19:41:33 - INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+03-01-2022 19:41:33 - INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
+03-01-2022 19:41:33 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Controller: getMobileGame method is initialized
+03-01-2022 19:41:33 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : MobileGamesService: getMobileGame method is initialized
+03-01-2022 19:41:33 - INFO  com.capg.mobilegames.utils.MobileGamesConstants : Mobile Games Service: addMobileGame method is executed
+03-01-2022 19:41:33 - ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: org/mapstruct/factory/Mappers] with root cause
+java.lang.ClassNotFoundException: org.mapstruct.factory.Mappers
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at com.capg.mobilegames.mapstruct.mapper.IMobileGamesMapper.<clinit>(IMobileGamesMapper.java:12) ~[main/:na]
+	at com.capg.mobilegames.service.MobileGamesService.getMobileGame(MobileGamesService.java:48) ~[main/:na]
+	at com.capg.mobilegames.controller.MobileGamesController.getMobileGame(MobileGamesController.java:55) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:485) ~[spring-cloud-context-3.1.0.jar:3.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.14.jar:5.3.14]
+	at com.capg.mobilegames.controller.MobileGamesController$$EnhancerBySpringCGLIB$$58f5fb89.getMobileGame(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.2.jar:2.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+03-01-2022 19:46:23 - INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver : Resolving eureka endpoints via configuration

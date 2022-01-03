@@ -29,7 +29,8 @@ public class MobileGamesService implements IMobileGamesService {
 		
 		LOGGER.info("Mobile Games Service: addMobileGame method is executed");
 
-		return mobileGamesMapper.mobileGamesToMobileGamesDTO(addedmobileGame);
+		//return mobileGamesMapper.mobileGamesToMobileGamesDTO(addedmobileGame);
+		return mobileGamesMapper.INSTANCE.mobileGamesToMobileGamesDTO(addedmobileGame);
 	}
 
 	@Override
@@ -43,7 +44,7 @@ public class MobileGamesService implements IMobileGamesService {
 		
 		LOGGER.info("Mobile Games Service: addMobileGame method is executed");
 		
-		return mobileGamesMapper.mobileGamesToMobileGamesDTO(getMobileGame);
-		
+		//return mobileGamesMapper.mobileGamesToMobileGamesDTO(getMobileGame);
+		return mobileGamesMapper.INSTANCE.mobileGamesToMobileGamesDTO(getMobileGame);
 	}
 }

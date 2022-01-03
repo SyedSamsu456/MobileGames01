@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-01-03T17:06:25+0530",
-    comments = "version: 1.4.0.Beta2, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.3.jar, environment: Java 11.0.12 (Oracle Corporation)"
+    date = "2022-01-03T19:47:24+0530",
+    comments = "version: 1.4.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.3.2.jar, environment: Java 15 (AdoptOpenJDK)"
 )
 @Component
 public class IMobileGamesMapperImpl implements IMobileGamesMapper {
