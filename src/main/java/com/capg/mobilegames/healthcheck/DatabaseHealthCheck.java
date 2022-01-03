@@ -12,12 +12,11 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.health.Health;
-import org.springframework.boot.actuate.health.HealthContributor;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DatabaseHealthCheck implements HealthIndicator, HealthContributor {
+public class DatabaseHealthCheck implements HealthIndicator {
 
 	@Autowired
 	private DataSource ds;
