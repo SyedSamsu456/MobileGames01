@@ -26,8 +26,9 @@ public class DatabaseHealthCheck implements HealthIndicator {
 
 		LOGGER.info("Mobile Games Database Health Check : health method is initialized");
 
-		try (Connection conn = ds.getConnection()) {
-			Statement stmt = conn.createStatement();
+		try (Connection conn = ds.getConnection();
+				Statement stmt = conn.createStatement();) {
+			
 			stmt.execute(QUERY);
 		} catch (SQLException ex) {
 			
