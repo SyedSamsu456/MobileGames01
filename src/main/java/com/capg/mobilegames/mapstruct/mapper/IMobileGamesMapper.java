@@ -2,12 +2,11 @@ package com.capg.mobilegames.mapstruct.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 import com.capg.mobilegames.beans.MobileGames;
 import com.capg.mobilegames.mapstruct.dto.MobileGamesDTO;
 
-@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring")
 public interface IMobileGamesMapper {
 	
 	IMobileGamesMapper INSTANCE = Mappers.getMapper(IMobileGamesMapper.class);
