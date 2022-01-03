@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'war'
+	id "org.sonarqube" version "3.3"
 }
 
 group = 'com.capg.mobilegames'
@@ -46,6 +47,7 @@ dependencies {
 	compileOnly 'io.cucumber:cucumber-jvm-deps:1.0.6'
 	testImplementation "com.github.tomakehurst:wiremock-jre8:2.32.0"
 	testImplementation 'io.rest-assured:rest-assured:4.4.0'
+	implementation 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3'
 }
 
 dependencyManagement {

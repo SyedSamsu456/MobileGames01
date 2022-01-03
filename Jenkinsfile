@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script{
                     withSonarQubeEnv('SonarQube') {
-                        bat 'gradle sonarqube -Dsonar.projectKey=MobileGames01 -Dsonar.login=admin -Dsonar.password=syedsamsu -Dsonar.sources=src -Dsonar.host.url=http://192.168.0.103:9000/'
+                        bat 'gradle  sonarqube -Dsonar.projectKey=MobileGames01 -Dsonar.login=admin -Dsonar.password=#CAPss24 -Dsonar.sources=src -Dsonar.host.url=http://localhost:9000/'
                     }
                 }
             }
