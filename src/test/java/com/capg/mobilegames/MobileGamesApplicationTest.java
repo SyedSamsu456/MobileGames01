@@ -8,6 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SelectPackages({"com.capg.mobilegames.controller"
 	,"com.capg.mobilegames.service"})
 @SpringBootTest
-public class MobileGamesApplicationTests {
+public class MobileGamesApplicationTest {
 
 }
