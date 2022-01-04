@@ -13,7 +13,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.capg.mobilegames.beans.MobileGames;
 import com.capg.mobilegames.mapstruct.dto.MobileGamesDTO;
 import com.capg.mobilegames.service.MobileGamesService;
 
@@ -25,9 +24,6 @@ class MobileGamesControllerTest {
 	
 	@InjectMocks
 	private MobileGamesController controller;
-	
-	//Given
-	private MobileGames mg = mock(MobileGames.class);
 		
 	private MobileGamesDTO mgDTO = mock(MobileGamesDTO.class);
 		
@@ -36,14 +32,14 @@ class MobileGamesControllerTest {
 		LOGGER.info("Mobile Games Controller Test: testaddMobileGame method is initialized");
 		
 		//When //then
-		when(service.addMobileGame(mg)).thenReturn(mgDTO);
+		when(service.addMobileGame(mgDTO)).thenReturn(mgDTO);
 		
 		//Verify
-		MobileGamesDTO mgNewDTO = service.addMobileGame(mg);
+		MobileGamesDTO mgNewDTO = service.addMobileGame(mgDTO);
 		
 		assertEquals(mgDTO, mgNewDTO);
 		
-		verify(service).addMobileGame(any(MobileGames.class));
+		verify(service).addMobileGame(any(MobileGamesDTO.class));
 		
 		
 		LOGGER.info("Mobile Games Controller Test: testaddMobileGame method is executed");
