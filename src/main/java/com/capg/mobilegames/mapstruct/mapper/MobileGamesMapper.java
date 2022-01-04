@@ -1,8 +1,6 @@
 //package com.capg.mobilegames.mapstruct.mapper;
 //
 //
-//import org.springframework.stereotype.Component;
-//
 //import com.capg.mobilegames.beans.MobileGames;
 //import com.capg.mobilegames.mapstruct.dto.MobileGamesDTO;
 //
