@@ -19,11 +19,11 @@ public class MobileGamesService implements IMobileGamesService {
 	
 
 	@Override
-	public MobileGamesDTO addMobileGame(MobileGames mobileGame) {
+	public MobileGamesDTO addMobileGame(MobileGamesDTO mobileGameDTO) {
 		
 		LOGGER.info("Mobile Games Service: addMobileGame method is initialized");
 		
-		MobileGames addedmobileGame = mobileGamesRepo.save(mobileGame);
+		MobileGames addedmobileGame = mobileGamesRepo.save(IMobileGamesMapper.INSTANCE.mobileGamesDtoToMobileGames(mobileGameDTO));
 		
 		LOGGER.info("Mobile Games Service: addMobileGame method is executed");
 

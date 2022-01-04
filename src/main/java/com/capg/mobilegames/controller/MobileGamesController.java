@@ -35,11 +35,11 @@ public class MobileGamesController {
 
 
 	@PostMapping(POST)
-	public ResponseEntity<MobileGamesDTO> addMobileGame(@RequestBody MobileGames mobileGame) {
+	public ResponseEntity<MobileGamesDTO> addMobileGame(@RequestBody MobileGamesDTO mobileGameDTO) {
 
 		LOGGER.info("Mobile Games Controller: addMobileGame method is initialized");
 
-		MobileGamesDTO mobileGamesDTO = mobileGamesService.addMobileGame(mobileGame);
+		MobileGamesDTO mobileGamesDTO = mobileGamesService.addMobileGame(mobileGameDTO);
 		
 		LOGGER.info("Mobile Games Controller: addMobileGame method is executed");
 
