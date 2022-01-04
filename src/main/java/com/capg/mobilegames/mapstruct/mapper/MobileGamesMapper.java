@@ -1,6 +1,5 @@
 //package com.capg.mobilegames.mapstruct.mapper;
 //
-//import static com.capg.mobilegames.utils.MobileGamesConstants.LOGGER;
 //
 //import org.springframework.stereotype.Component;
 //
