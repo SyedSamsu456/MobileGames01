@@ -51,7 +51,7 @@ class MobileGamesServiceTest {
 		when(mapper.mobileGamesToMobileGamesDTO(mg)).thenReturn(mgDTO);
 		
 		//Verify
-		MobileGamesDTO mgNewDTO = service.addMobileGame(mg);
+		MobileGamesDTO mgNewDTO = service.addMobileGame(mgDTO);
 		
 		assertEquals(mgDTO, mgNewDTO);
 		
